@@ -1,0 +1,324 @@
+@font-face {
+  font-family: "aaaaaaa";
+  src: url(Poppins-Light.ttf);
+}
+:root{
+  --bg--color: #f3f3f3;
+  --bar--color: #94abbd;
+  --bt--color: #b67054;
+  --tbarbt--color: #362827;
+  --box--color: #556e84;
+  --popup--color: #e5926c;
+}
+body {
+  margin: 0;
+  padding: 0;
+
+  display: flex;
+  background-color: var(--bg--color);
+
+  font-family: "aaaaaaa",sans-serif;
+}
+.barlayout{
+  display: flex;
+  min-height: 100vh;
+  width: 290px;
+  
+  position: fixed; /* 固定位置 */
+}
+.sidebar{
+  height: 100vh;
+  width: 70px;
+
+  background-color: var(--bg--color);
+
+  position: fixed;
+}
+.logozone{
+  height: 80px;
+  width: 70px;
+  margin-bottom: 5px;
+  
+  background-color: var(--bg--color);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 50px;
+
+  color: var(--box--color);
+}
+.option{
+  height: 60px;
+  width: 70px;
+  margin-bottom: 5px;
+
+  background-color: var(--bg--color);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 35px;
+
+  color: var(--tbarbt--color);
+}
+
+
+/*topbar*/
+.topbar{
+  position: fixed;
+  top: 0;
+  left: 70px;
+  height: 70px;
+  width: calc(100% - 70px);
+
+  background-color: var(--bg--color);
+
+  display: flex;
+  justify-content: space-between;
+
+  z-index: 2;
+
+  box-shadow: black;
+}
+.topbarzone {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.topbarleftbutton{
+  
+  background-color: var(--bg--color);
+  
+  display: flex;
+}
+.topbarbutton{
+  height: 70px;
+  width: 70px;
+
+  background-color: var(--bg--color);
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 45px;
+  margin: 0 10px;
+
+  color: var(--tbarbt--color);
+}
+
+.buttonright{
+  background-color: var(--bg--color);
+
+  display: flex;
+}
+.buttonnn{
+  height: 70px;
+  width: 70px;
+
+  background-color: var(--bg--color);
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 45px;
+  margin: 0 10px;
+
+  color: var(--tbarbt--color);
+}
+/*section*/
+section{
+  width: calc(100% - 70px);
+  margin-left: 70px;
+  margin-top: 70px;
+  position: relative;
+  min-height: 200vh;
+}
+/*section end*/
+
+/*dashboard 拖拽layout*/
+.dashboard{
+  width: 100%;
+  min-height: 200vh;
+
+  z-index: 1;
+}
+.grid-stack{
+  min-height: 100%;
+  background-color: var(--bg--color);
+  filter: brightness(0.965);
+  border-radius: 15px;
+  width: 1800px;
+  margin : 0 auto; /* 居中对齐 */
+}
+.grid-stack-item-content{
+  background-color: var(--bar--color);
+  border-radius: 15px;
+}
+.grid-stack .grid-stack-placeholder > .placeholder-content,
+.grid-stack .ui-draggable-dragging {
+  border-radius: 15px !important; /* 或你设定的值 */
+}
+
+
+
+
+
+.popup-box {
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+
+  display: none; /* 默认隐藏 */
+  z-index: 3;
+
+  width: 700px;
+  height: 350px;
+
+  overflow: hidden;
+
+  opacity: 0.95;
+}
+.popupleft{
+  width: 170px;
+  height: 100%;
+  background-color: var(--bar--color);
+
+  overflow: auto;
+
+  scrollbar-width: none; 
+
+  opacity: 0.95;
+}
+.popupright{
+  width: 530px;
+  height: 100%;
+  background-color: var(--bar--color);
+
+  opacity: 0.95;
+}
+.popuplefttext{
+  height: 30px;
+  width: 150px;
+
+  background-color: var(--bar--color);
+
+  margin-bottom: 10px;
+  margin-top: 10px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  opacity: 0.95;
+}
+.popupright {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);  /* 三列 */
+  grid-template-rows: repeat(2, 1fr);     /* 两行，保持行高一致 */
+  gap: 10px;                              /* 每个格子间隔 10px，可调整 */
+  width: 100%;                            /* 宽度自适应，可设定具体值 */
+  aspect-ratio: 3 / 2;                    /* 保持整个容器比例为3:2 */
+
+  padding: 0 10px; /* 左右各10px间距 */
+
+  overflow: auto;
+
+  scrollbar-width: none; 
+
+  opacity: 0.95;
+}
+
+.rightbox {
+  background-color: var(--bar--color);    /* 示例背景色 */
+  aspect-ratio: 1 / 1;                    /* 保持正方形 */
+  display: flex;
+  align-items: center;
+  justify-content: center;                /* 可选边框 */
+  border-radius: 8px;
+  
+  opacity: 0.95;/* 圆角可选 */
+}
+
+/*各种box设计*/
+
+/*1*1 LIGHT*/
+.style-light-1{
+  display:flex;
+  overflow: hidden;
+  align-items: center;
+}
+.style-light-1 .left{
+  width: 65%;
+  height: 100%;
+  display:flex;
+  align-items: center;
+  font-size: 45px;
+
+  flex-direction: column;
+}
+.style-light-1 .left .leftup{
+  width: 100%;
+  height: 60%;
+  background-color: var(--bar--color);
+
+  display: flex;
+  align-items: end;
+  justify-content: center;
+}
+.style-light-1 .left .leftup .leftuplogo{
+  height: 48px;
+  width: 48px;
+  background-color: var(--bar--color);
+  border-radius: 10px;
+  filter: brightness(0.9);
+
+}
+.style-light-1 .left .leftdown{
+  width: 100%;
+  height: 40%;
+  background-color: var(--bar--color);
+
+  text-align: center;
+  padding-top: 5px;
+}
+.style-light-1 .left .leftdown h2{
+  font-size: 18px;
+  margin: 0;
+}
+.style-light-1 .right{
+  width: 35%;
+  height: 100%;
+  display:flex;
+  align-items: center;
+  justify-content: right;
+}
+.style-light-1 .right .button{
+  background-color: var(--bg--color);
+  width: 25px;
+  height: 50px;
+  border-radius: 50px;
+  cursor: pointer;
+  position: relative;
+}
+.style-light-1 .right .button::before{
+  position: absolute;
+  content: '';
+  background-color: #362827;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  margin: 2.5px;
+
+  transition: 0.2s;
+}
+.right:has(input:checked) > .button {
+  background-color: var(--box--color);
+}
+.right:has(input:checked) > .button:before {
+  transform: translateY(24px);
+}
+input{
+  opacity: 0; 
+}
+
